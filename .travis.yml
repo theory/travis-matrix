@@ -6,5 +6,7 @@ env: PGVERSION=system
 script: perl -E "say $ENV{PGVERSION}"
 matrix:
   include:
-    - PGVERSION=11
-    - PGVERSION=10
+    - perl: "5.28"
+      env:
+        - PGVERSION=11
+        - PGVERSION=10
