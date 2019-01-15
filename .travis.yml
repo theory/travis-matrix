@@ -9,4 +9,6 @@ matrix:
     - perl: "5.28"
       env:
         - PGVERSION=11
+    - perl: "5.28"
+      env:
         - PGVERSION=10
