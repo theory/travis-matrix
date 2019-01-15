@@ -3,7 +3,7 @@ perl:
   - "5.28"
   - "5.26"
 env: PGVERSION=system
-script: perl -E 'say $ENV{PGVERSION}'
+script: perl -E "say $ENV{PGVERSION}"
 matrix:
   include:
     - PGVERSION=11
