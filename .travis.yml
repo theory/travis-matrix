@@ -1,11 +1,6 @@
-services: docker
 language: perl
 perl:
   - "5.28"
   - "5.26"
 env: PGVERSION=system
-matrix:
-  include:
-    - env: PGVERSION=11
-    - env: PGVERSION=10
 script: perl -E "say $ENV{PGVERSION}"
