@@ -4,11 +4,10 @@ perl:
   - "5.26"
 env: PGVERSION=system
 script: perl -E 'say $ENV{PGVERSION}'
-matrix:
+jobs:
   include:
     - env: PGVERSION=11
     - env: PGVERSION=10
-jobs:
-  include:
     stage: Special
+    - env: PGVERSION=12
     script: perl -E 'say $ENV{PGVERSION}'
