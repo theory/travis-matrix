@@ -8,3 +8,7 @@ matrix:
   include:
     - env: PGVERSION=11
     - env: PGVERSION=10
+jobs:
+  include:
+    stage: Special
+    script: perl -E 'say $ENV{PGVERSION}'
